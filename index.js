@@ -1,5 +1,5 @@
-const bodyParser = require('./node_modules/body-parser'),
-  express = require('./node_modules/express'),
+const bodyParser = require('body-parser'),
+  express = require('express'),
   { checkToken } = require('./middleware/checkToken')
 
 const app = express()

@@ -1,4 +1,4 @@
-const jwt = require('../node_modules/jsonwebtoken'),
+const jwt = require('jsonwebtoken'),
   secret = 'YOUR_SECRET'
 
 const checkToken = (req, res, next) => {
