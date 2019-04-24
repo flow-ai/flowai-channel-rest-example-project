@@ -11,11 +11,24 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 app.listen(port = 3030, () => {
-  console.log(require('./node_modules/jsonwebtoken').sign({data: null}, 'YOUR_SECRET'))
   console.log('listening at %s', port)
 })
 
 app.post('/messaging/flowai/webhook', checkToken, (req, res) => {
-  console.log(req.body)
+  const {
+    threadId,
+    messages
+  } = req.body
+
+  const YOUR_THREAD_ID = threadId.split('|')[0]
+
+  messages.forEach(message => {
+    message.responses.forEach(response => {
+      /**
+       * Here you can save the messages
+       */
+    })
+  })
+
   res.sendStatus(200)
 })
