@@ -1,5 +1,5 @@
-const request = require("./node_modules/request-promise/lib/rp"),
-  uuidV4 = require("./node_modules/uuid/v4"),
+const request = require("request-promise"),
+  uuidV4 = require("uuid/v4"),
   {
     Message,
     Originator
